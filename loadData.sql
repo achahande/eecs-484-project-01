@@ -136,6 +136,9 @@ JOIN Cities C
     AND E.event_state = C.state_name
     AND E.event_country = C.country_name;
 
+--circular dependency
+SET AUTOCOMMIT OFF;
+
 INSERT INTO Albums (
     album_id,
     album_owner_id,
@@ -173,11 +176,10 @@ SELECT
     photo_modified_time,
     photo_link
 FROM project1.Public_Photo_Information;
-<<<<<<< HEAD
 
-=======
->>>>>>> a2a8efa452cdd81da332c80503c1536b2c9276fd
+--circular dependency
 COMMIT;
+SET AUTOCOMMIT ON;
 
 INSERT INTO Tags (
     tag_photo_id,
@@ -193,4 +195,3 @@ SELECT
     tag_x_coordinate,
     tag_y_coordinate
 FROM project1.Public_Tag_Information;
-COMMIT;
