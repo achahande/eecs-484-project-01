@@ -173,9 +173,11 @@ SELECT
     photo_modified_time,
     photo_link
 FROM project1.Public_Photo_Information;
+<<<<<<< HEAD
 
+=======
+>>>>>>> a2a8efa452cdd81da332c80503c1536b2c9276fd
 COMMIT;
-SET AUTOCOMMIT ON;
 
 INSERT INTO Tags (
     tag_photo_id,
@@ -191,3 +193,4 @@ SELECT
     tag_x_coordinate,
     tag_y_coordinate
 FROM project1.Public_Tag_Information;
+COMMIT;
