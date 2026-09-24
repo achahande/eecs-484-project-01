@@ -136,9 +136,6 @@ JOIN Cities C
     AND E.event_state = C.state_name
     AND E.event_country = C.country_name;
 
---check if this works
-SET AUTOCOMMIT OFF;
-
 INSERT INTO Albums (
     album_id,
     album_owner_id,
@@ -176,10 +173,7 @@ SELECT
     photo_modified_time,
     photo_link
 FROM project1.Public_Photo_Information;
-
---check if this works
 COMMIT;
-SET AUTOCOMMIT ON;
 
 INSERT INTO Tags (
     tag_photo_id,
@@ -195,3 +189,4 @@ SELECT
     tag_x_coordinate,
     tag_y_coordinate
 FROM project1.Public_Tag_Information;
+COMMIT;
