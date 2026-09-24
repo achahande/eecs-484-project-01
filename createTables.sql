@@ -195,5 +195,3 @@ CREATE TRIGGER Order_Friend_Pairs
         END IF;
     END;
 /
-
---end of file
