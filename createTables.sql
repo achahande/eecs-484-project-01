@@ -139,12 +139,14 @@ CREATE TABLE Photos (
 );
 
 ALTER TABLE Albums
-ADD FOREIGN KEY (cover_photo_id)
+ADD CONSTRAINT album_cover_fkey
+FOREIGN KEY (cover_photo_id)
 REFERENCES Photos(photo_id)
 INITIALLY DEFERRED DEFERRABLE;
 
 ALTER TABLE Photos
-ADD FOREIGN KEY (album_id)
+ADD CONSTRAINT photo_album_fkey
+FOREIGN KEY (album_id)
 REFERENCES Albums(album_id)
 INITIALLY DEFERRED DEFERRABLE;
 
